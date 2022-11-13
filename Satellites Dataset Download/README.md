@@ -10,7 +10,7 @@ earthengine authenticate
 ```
 
 ## Preparation
-if you want to export to drive directly using a colab notebook
+if you want to export to drive directly using a colab notebook, run this
 ```python
 from google.colab import drive
 drive.mount('/content/drive')
