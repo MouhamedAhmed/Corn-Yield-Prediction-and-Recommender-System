@@ -1,3 +1,2 @@
-# Corn-Yield-Prediction-and-Recommender-System
+# Export Satellite Dataset to your Drive
 
-## To Export Satellite Dataset to your Drive, refer to [this folder](Satellites%20Dataset%20Download/)
