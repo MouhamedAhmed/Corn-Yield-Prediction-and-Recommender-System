@@ -223,7 +223,7 @@ def create_circular_bb_polygon(center, area=100):
 ###################################################################################################################################################
 
 
-def get_loc_satellite_tasks(sat, bands, start_dates, end_dates, loc_id, folder_name, latitude, longitude, polygon_area=100):
+def get_loc_circular_satellite_tasks(sat, bands, start_dates, end_dates, loc_id, folder_name, latitude, longitude, polygon_area=100):
     '''
     a function to get all tasks for a specific location and multiple periods
     Inputs:
@@ -275,34 +275,3 @@ def get_loc_satellite_tasks(sat, bands, start_dates, end_dates, loc_id, folder_n
 
 
 ###################################################################################################################################################
-
-
-def get_loc_tasks(latitude, longitude, year, loc_id, sat, folder_name, bands, polygon_area=50):
-    '''
-    a function to get all tasks for a specific location and year
-    Inputs:
-        - latitude:                     latitude of the center
-        - longitude:                    longitude of the center
-        - year:                         year of interest to get imagery in from 1st of April to 30th of September
-        - loc_id:                       location index in the unique lat/lon dataframe to be used in video names
-        - sat:                          satellite code
-        - folder_name:                  folder to save videos in, must be placed in /content/drive/MyDrive
-        - bands:                        a list of the names of bands to be exported from the satellite database
-        - polygon_area:                 polygon area in KM^2
-    '''
-
-    start_date = str(int(year)) + '-04-01'
-    end_date = str(int(year)) + '-09-30'
-
-    tasks = get_loc_satellite_tasks(
-                                        sat, 
-                                        bands, 
-                                        [start_date], 
-                                        [end_date], 
-                                        loc_id,
-                                        folder_name, 
-                                        latitude, 
-                                        longitude, 
-                                        polygon_area=polygon_area
-                                    )
-    return tasks
