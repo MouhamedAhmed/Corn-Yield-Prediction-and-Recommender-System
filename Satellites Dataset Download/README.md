@@ -1,20 +1,5 @@
 # Export Satellite Dataset to your Drive
 
-## Installations
-```bash
-pip install earthengine-api
-```
-then
-```bash
-earthengine authenticate 
-```
+Refer to this Notebook, for full guidance of how to setup the environment.
+If you need to run it, run it on Colab.
 
-## Preparation
-if you want to export to drive directly using a colab notebook, run this
-```python
-from google.colab import drive
-drive.mount('/content/drive')
-
-from google.colab import auth
-auth.authenticate_user()
-```
